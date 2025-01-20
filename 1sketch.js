@@ -3,7 +3,6 @@ function setup() {
   background(240);
   textSize(12);
   
-  // Data
   const data = [
     { length: 1, percent: 99 },
     { length: 2, percent: 97 },
@@ -25,12 +24,10 @@ function setup() {
   const maxLength = 15; // Max length in feet
   const maxPercent = 100; // Max percentage
 
-  // Draw Axes
   stroke(0);
   line(50, 350, 750, 350); // X-Axis
   line(50, 50, 50, 350);   // Y-Axis
   
-  // Plot Data
   noFill();
   stroke(0);
   beginShape();
@@ -41,7 +38,6 @@ function setup() {
   }
   endShape();
 
-  // Data Points
   fill(0);
   noStroke();
   for (let i = 0; i < data.length; i++) {
