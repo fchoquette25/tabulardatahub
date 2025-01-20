@@ -5,7 +5,6 @@ function setup() {
   createCanvas(800, 400);
   textSize(12);
 
-  // Data
   data = [
     { length: 1, percent: 99 },
     { length: 2, percent: 97 },
@@ -35,15 +34,12 @@ function draw() {
     data.slice(10, 15) // Subset 3: Lengths 11–15
   ];
 
-  // Get the current subset
   const subset = subsets[subsetIndex];
 
-  // Draw Axes
   stroke(0);
   line(50, 350, 750, 350); // X-Axis
   line(50, 50, 50, 350);   // Y-Axis
 
-  // Plot Data
   noFill();
   stroke(0);
   beginShape();
@@ -54,7 +50,6 @@ function draw() {
   }
   endShape();
 
-  // Draw Data Points
   fill(0);
   noStroke();
   for (let i = 0; i < subset.length; i++) {
@@ -63,7 +58,6 @@ function draw() {
     ellipse(x, y, 8, 8);
   }
 
-  // Display Subset Info
   textSize(16);
   text(`Subset ${subsetIndex + 1}: Lengths ${subset[0].length}–${subset[subset.length - 1].length}`, 50, 30);
 
